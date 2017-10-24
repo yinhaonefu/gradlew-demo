@@ -1,0 +1,20 @@
+group 'com.shengsiyuan'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task wrapper(type: Wrapper){
+    gradleVersion = '4.0'//执行gradle wrapper指定使用的版本
+    distributionType = 'all'//执行gradle wrapper时使用的包类型，all包括二进制，源码 文档等
+}
